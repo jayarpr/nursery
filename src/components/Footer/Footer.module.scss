@@ -1,0 +1,22 @@
+.footer {
+    display: grid;
+    justify-content: center; 
+    font-weight: bold;
+
+    &__image {
+        height: 100px;
+        width: 100px;   
+        vertical-align: top;     
+    }
+    &__social-icons {
+        display: flex;
+        width: 150px;
+        justify-content: space-around;
+        padding: 5px 0;
+    }
+    &--sub {      
+        font-size: small;
+        font-weight: lighter;
+        padding: 5px 0;
+     }
+}

@@ -1,0 +1,8 @@
+.cart {
+    margin: 10px 80px 10px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    border: 1px solid black;
+    text-align: center;
+}

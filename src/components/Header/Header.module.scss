@@ -1,0 +1,38 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    margin: 20px 0;
+}
+
+.mediaicons {
+    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.websitename {
+    text-align: center;
+    font-size: 18px;
+}
+
+.topright {
+    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.login{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    span {
+        background-color: rgb(234, 234, 240);
+        font-size: 14px;
+    }
+}
+
+.cart {
+    font-size: 20px;
+    background-color: rgb(136, 159, 160);
+}

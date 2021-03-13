@@ -1,0 +1,19 @@
+.pot {
+    height: 100%;
+    width:100%;
+    text-align: center;
+
+    img {
+        height:200px;
+        width: 200px;        
+    }  
+
+    &--desc {
+        color: rgb(86,84,84);        
+    }
+
+    &--price {
+        margin-top: 10px;
+        color: rgb(137,166,133);        
+    }
+}
