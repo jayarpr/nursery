@@ -7,6 +7,8 @@ import Banner from "../Banner";
 
 const Cart = (props) => {
 
+  const {removeFromCart} = props;
+
   const plantsInCart = plants.filter(plant => plant.quantity > 0);
   const potsInCart = pots.filter(pot => pot.quantity > 0);
   const itemsInCart = plantsInCart.concat(potsInCart);
@@ -15,7 +17,7 @@ const Cart = (props) => {
 
   const getContentJSX = () => {
     const content =  cartItems.length > 0 ? 
-                     cartItems.map(item => <CartItem key={item.id} item={item} deleteItem={removeItem}/>)
+                     cartItems.map(item => <CartItem key={item.description} item={item} deleteItem={removeItem}/>)
                      : "No items added to the cart";
     return content;
   }
@@ -23,11 +25,13 @@ const Cart = (props) => {
     const total = cartItems.length > 0 ? 
                   cartItems.reduce((accumulator, currentValue) => accumulator+ parseFloat(currentValue.price * currentValue.quantity), 0)
                  : 0.00;
-    return total;
+    return total.toFixed(2);
   }
 
   const removeItem = (item) => {
-    item.quantity = 0;
+    // console.log('item--', item.quantity);
+    removeFromCart(item);
+    // item.quantity = 0;
     updateCartItems(cartItems.filter(item => item.quantity > 0));
   };
 

@@ -6,10 +6,6 @@ import styles from './../../App.module.scss';
 
 const PlantCollection = (props) => {
 
-    const increaseQuantity = (plant) => {
-        plant.quantity += 1;
-    }
-
     return (
         <div>
             <Banner src="../../assets/top-view-monstera-other-leaves-with-copy-space.jpg"/>
@@ -17,7 +13,7 @@ const PlantCollection = (props) => {
                 <p>Style your plants</p>
                 <div className={styles.container__line}></div>
             </section>
-            <PlantList addToCart={props.addToCart} subType={props.subType} increaseQuantity={increaseQuantity} plants={plants}/>
+            <PlantList addToCart={props.addToCart} subType={props.subType} plants={plants}/>
         </div>
     )
 }

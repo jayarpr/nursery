@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "@reach/router";
 import styles from "./Plant.module.scss";
 
-const Plant = ({plant, addToCart, increaseQuantity}) => {
+const Plant = ({plant, addToCart}) => {
   const {
     id,
     description,
@@ -10,10 +10,6 @@ const Plant = ({plant, addToCart, increaseQuantity}) => {
     price    
   } = plant;
 
-  const addPlant = () => {
-    increaseQuantity(plant);
-    addToCart();
-  }
   return (
     <>
       <div id={id} className={styles.plant}>
@@ -21,7 +17,7 @@ const Plant = ({plant, addToCart, increaseQuantity}) => {
         <div className={styles['plant--desc']}> {description} </div>
         <div className={styles['plant--price']}>
           {price}
-          <button onClick={addPlant} title="Add to Cart">Add to Cart</button>
+          <button onClick={() => addToCart(plant)} title="Add to Cart">Add to Cart</button>
         </div>
       </div>
       

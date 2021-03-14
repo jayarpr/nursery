@@ -9,7 +9,7 @@ const Routes = (props) => {
     return (
         <div>
             <Router>
-                <Cart path="viewcart"/>
+                <Cart removeFromCart={props.removeFromCart} path="viewcart"/>
                 <PlantDetails path="plantdetails"/>
                 <PlantCollection addToCart={props.addToCart} subType={props.subType} path="/"/>
                 <PotCollection addToCart={props.addToCart} subType={props.subType} path="pots"/>

@@ -7,18 +7,23 @@ import Footer from './components/Footer';
 const App = () => {
 
   const [subType, setSubType] = useState("");
-  const [cartCounter, setCartCounter] = useState(0);
+  const [cartCounter, updateCartCounter] = useState(0);
 
-  const incrementCartCounter = () => {
-    const incremented = cartCounter + 1;
-    setCartCounter(incremented);
+  const addToCart = (product) => {
+    product.quantity += 1;
+    updateCartCounter(cartCounter + 1);
+  }
+
+  const removeFromCart = (product) => {
+    updateCartCounter(cartCounter - product.quantity);
+    product.quantity = 0;
   }
 
   return (
     <div>
       <Header cartCounter={cartCounter}/>
       <Navbar setSubType={setSubType}/>
-      <Routes addToCart={incrementCartCounter} subType={subType}/>  
+      <Routes addToCart={addToCart} removeFromCart={removeFromCart} subType={subType}/>  
       <Footer/>
     </div>
   )
