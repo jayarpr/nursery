@@ -2,21 +2,34 @@
     display: grid;
     justify-content: center; 
     font-weight: bold;
+    margin:20px 100px 30px 100px;
+    grid-template-columns: 150px 600px; 
 
     &__image {
         height: 100px;
         width: 100px;   
         vertical-align: top;     
     }
-    &__social-icons {
+
+    &__topics {
+        display: flex;
+        justify-content: space-evenly;
+    } 
+
+    &__social_icons {
         display: flex;
         width: 150px;
-        justify-content: space-around;
+        font-size: 20px;
+        justify-content: space-evenly;
         padding: 5px 0;
     }
-    &--sub {      
+    &__sub {      
         font-size: small;
         font-weight: lighter;
         padding: 5px 0;
+     }
+
+     &__icons {
+        font-size: 20px;        
      }
 }

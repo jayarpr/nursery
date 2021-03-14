@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "@reach/router";
 import styles from "./Plant.module.scss";
 
 const Plant = ({plant, addToCart, increaseQuantity}) => {
@@ -6,8 +7,7 @@ const Plant = ({plant, addToCart, increaseQuantity}) => {
     id,
     description,
     image,
-    price,
-    quantity
+    price    
   } = plant;
 
   const addPlant = () => {
@@ -17,15 +17,12 @@ const Plant = ({plant, addToCart, increaseQuantity}) => {
   return (
     <>
       <div id={id} className={styles.plant}>
-        <div> <img src={image}/> </div>
+        <div> <Link to="plantdetails"><img alt="" src={image}/> </Link></div>
         <div className={styles['plant--desc']}> {description} </div>
         <div className={styles['plant--price']}>
           {price}
           <button onClick={addPlant} title="Add to Cart">Add to Cart</button>
         </div>
-        {/* <div className={styles['plant__button']}>
-          <button title="Add to Cart">Add to Cart</button>
-        </div> */}
       </div>
       
     </>

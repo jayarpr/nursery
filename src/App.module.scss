@@ -5,3 +5,14 @@
 .closed {
   display: none;
 }
+
+.container {
+  text-align: center;
+ &__line {
+      margin: auto;
+      margin-top: 10px;
+      height: 1px;        
+      background-color: black;
+      width: 1200px;
+ }
+}

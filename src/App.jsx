@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Navbar from './components/Navbar'
 import Routes from './containers/Routes';
-import styles from './App.module.scss'
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const App = () => {
 
@@ -19,6 +19,7 @@ const App = () => {
       <Header cartCounter={cartCounter}/>
       <Navbar setSubType={setSubType}/>
       <Routes addToCart={incrementCartCounter} subType={subType}/>  
+      <Footer/>
     </div>
   )
 }

@@ -8,15 +8,13 @@ const CartItem = (props) => {
   } = props;
   return (
     <>
-
       <div className={styles.cartItem}>
-        <div><img src={item.image}/></div>
+        <div><img alt="" src={item.image}/></div>
         <div>{item.description} </div>
         <div>{item.quantity} </div>
         <div>{item.price} </div>
         <div><button onClick={()=>deleteItem(item)}> Remove </button> </div>
       </div>
-     
     </>
   );
 };

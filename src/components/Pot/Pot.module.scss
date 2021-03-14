@@ -14,6 +14,8 @@
 
     &--price {
         margin-top: 10px;
-        color: rgb(137,166,133);        
+        color: rgb(137,166,133);    
+        display: flex;
+        justify-content: space-evenly;    
     }
 }

@@ -15,9 +15,15 @@ const Cart = (props) => {
 
   const getContentJSX = () => {
     const content =  cartItems.length > 0 ? 
-                  cartItems.map(item => <CartItem key={item.id} item={item} deleteItem={removeItem}/>)
-                  : "No items added to the cart";
+                     cartItems.map(item => <CartItem key={item.id} item={item} deleteItem={removeItem}/>)
+                     : "No items added to the cart";
     return content;
+  }
+  const getTotalPrice = () => {
+    const total = cartItems.length > 0 ? 
+                  cartItems.reduce((accumulator, currentValue) => accumulator+ parseFloat(currentValue.price * currentValue.quantity), 0)
+                 : 0.00;
+    return total;
   }
 
   const removeItem = (item) => {
@@ -25,25 +31,9 @@ const Cart = (props) => {
     updateCartItems(cartItems.filter(item => item.quantity > 0));
   };
 
-
-  // const [plantsInCart, updatePlantsInCart] = useState(plants.filter(plant => plant.quantity > 0))
-  // const [potsInCart, updatePotsInCart] = useState(pots.filter(pot => pot.quantity > 0))
-
-  // const removePlant = (plant) => {
-  //   plant.quantity = 0;
-  //   updatePlantsInCart(plants.filter(plant => plant.quantity > 0));
-  // };
-
-  // const removePot = (pot) => {
-  //   pot.quantity = 0;
-  //   updatePotsInCart(pots.filter(pot => pot.quantity > 0));
-  // };
-
   return (
     <>
     <section>
-      {/* { plantsInCart.map(plant => <CartItem item={plant} removeItem={removePlant}/>) }
-      { potsInCart.map(pot => <CartItem item={pot} removeItem={removePot}/>)} */}
       <Banner src="../../assets/banner-1082646_640.jpg"/>
       <div className={styles.cart}>
         <div>Item</div>
@@ -53,7 +43,7 @@ const Cart = (props) => {
         <div> Remove </div>
       </div>
       <div style={{textAlign:"center"}}>{getContentJSX()}</div>
-      {/* { cartItems.map(item => <CartItem key={item.id} item={item} deleteItem={removeItem}/>)} */}
+      <p style={{textAlign:"center"}}>Total Price: {getTotalPrice()}</p>
     </section>
     </>
   );
