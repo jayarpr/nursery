@@ -2,9 +2,7 @@ import React from "react";
 import { Link } from '@reach/router';
 import styles from "./Header.module.scss";
 import { TiShoppingCart } from 'react-icons/ti';
-import { FaFacebookSquare } from 'react-icons/fa';
-import { FaTwitterSquare } from 'react-icons/fa';
-import { FaInstagramSquare } from 'react-icons/fa';
+import {FaFacebookSquare, FaTwitterSquare, FaInstagramSquare} from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { IoPersonOutline } from 'react-icons/io5';
 
@@ -30,7 +28,7 @@ const Header = (props) => {
             <Link to="viewcart"><TiShoppingCart/></Link>
           </div>
           <div>
-            {props.cartCounter > 0 ? props.cartCounter : ""}
+            {props.cartCounter}
           </div>
         </div>
       </div>

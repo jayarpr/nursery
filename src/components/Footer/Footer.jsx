@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.scss";
 import appstyles from './../../App.module.scss';
-import {AiFillFacebook, AiFillTwitterSquare, AiFillInstagram} from 'react-icons/ai';
+import {FaFacebookSquare, FaTwitterSquare, FaInstagramSquare} from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -34,9 +34,9 @@ const Footer = () => {
                 <label>#MakeItGreener</label>
             </div>                    
             <div className={styles.footer__social_icons}>
-                <AiFillFacebook/>
-                <AiFillTwitterSquare/>
-                <AiFillInstagram/>
+              <FaFacebookSquare/>
+              <FaTwitterSquare/>
+              <FaInstagramSquare/>
             </div>
           </div> 
         </div>

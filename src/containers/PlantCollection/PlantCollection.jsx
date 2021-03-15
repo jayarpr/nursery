@@ -10,7 +10,7 @@ const PlantCollection = (props) => {
         <div>
             <Banner src="../../assets/top-view-monstera-other-leaves-with-copy-space.jpg"/>
             <section className={styles.container}>
-                <p>Style your plants</p>
+                <p>Trending Plants</p>
                 <div className={styles.container__line}></div>
             </section>
             <PlantList addToCart={props.addToCart} subType={props.subType} plants={plants}/>

@@ -9,11 +9,11 @@ const PlantDetails = () => {
   let data = "";
 
   const fetchData = async(plantName) => {
-    // const response = await fetch('https://trefle.io/api/v1/plants?token=t9Y-9aYgpPD0lw4XplEe018SkLf86F7kr-fqBz7lD7Q&q=Nephrolepis', { mode: 'no-cors'});
-    const response = await fetch('https://quote-garden.herokuapp.com/api/v3/quotes')
+    const response = await fetch('https://trefle.io/api/v1/plants?token=t9Y-9aYgpPD0lw4XplEe018SkLf86F7kr-fqBz7lD7Q&q=Nephrolepis', { mode: 'no-cors'});
+    // const response = await fetch('https://quote-garden.herokuapp.com/api/v3/quotes')
     const json = await response.json();
-    data = json.data[0].quoteText;
-    console.log(data);
+    // data = json.data[0].quoteText; console.log(data);
+    console.log(json);
   }
   
   fetchData('Nephrolepis')
