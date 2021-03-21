@@ -1,0 +1,54 @@
+
+.red {
+    color: maroon;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.form_enquiry {
+    margin:auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 1200px;
+
+    &__text__block {
+        margin: auto;
+        text-align: left;  
+        width: 450px; 
+        padding: 20px;
+        input {
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            border: 1px solid rgb(96, 119, 96);  
+            border-radius: 5px;          
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid rgb(96, 119, 96);  
+            border-radius: 5px;          
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+    // border: 1px solid black;
+    margin: auto;
+}
+
+.contact_button {    
+    text-align: center;
+    button{
+        background-color: rgb(96, 119, 96);
+        color: white;
+        font-weight: bold;
+        width: 120px;
+        height:40px;
+        text-transform: uppercase;
+    }
+}

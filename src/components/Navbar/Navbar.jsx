@@ -44,7 +44,7 @@ const Navbar = (props) => {
           </div>
 
           <div className={styles.nav_desktop}> 
-            Contact Us 
+            <Link to="contactus">Contact Us </Link>
           </div>
       </nav>
     </>
